@@ -18,9 +18,9 @@ int main(int argc, char *argv[])
     printf("FileName : %s\n", argv[1]);
     printf("File Size: %ld bytes\n", filestat.st_size);
     printf("No. of Links: %ld bytes\n", filestat.st_nlink);
-    printf("File User ID: %d bytes\n", filestat.st_uid);
-    printf("File Group ID: %d bytes\n", filestat.st_gid);
-    printf("File Modified Time: %s\n", filestat.st_mtime);
+    printf("File User ID: %d\n", filestat.st_uid);
+    printf("File Group ID: %d\n", filestat.st_gid);
+    printf("File Modified Time: %s\n", ctime(&filestat.st_mtime));
 
     return 0;
 }
